@@ -5,16 +5,12 @@
  */
 
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.Reader;
-import java.io.StringReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.io.FileReader;
-import java.io.IOException;
 
 /**
  *
@@ -23,10 +19,10 @@ import java.io.IOException;
 public class lab1 {
 
 
-    @SuppressWarnings("empty-statement")
+//    @SuppressWarnings("empty-statement")
     public static void main(String[] args) throws FileNotFoundException, IOException {
 
-        Scanner ff = new Scanner(new File("file.txt"));
+        Scanner f = new Scanner(new File("file.txt"));
         String s = null;
         // FileReader r = new FileReader(ff);
         //  BufferedReader br = new BufferedReader(r);
@@ -47,8 +43,8 @@ public class lab1 {
         ArrayList<String> symbols = new ArrayList<>();
 
         // ff = new File("file.txt");
-        while (ff.hasNext()) {
-            s = ff.nextLine().trim();
+        while (f.hasNext()) {
+            s = f.nextLine().trim();
 
             String[] k = s.split(" ");
 
